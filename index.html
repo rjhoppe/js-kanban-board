@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag N Drop</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Drag N' Drop</h1>
+    </header>
+    <div class="lists">
+      <div class="list" id="list1">
+        <div class="list-header">To-Do</div>
+        <div class="list-item" draggable="true">New List Item
+          <span class="material-symbols-outlined" onclick="editItem()">
+            edit
+          </span>
+        </div>
+        <button class="new-item" onclick="createNewItem('list1')">Add New Item</button>
+      </div>
+      <div class="list" id="list2">
+        <div class="list-header">In Progress</div>
+        <button class="new-item" onclick="createNewItem('list2')">Add New Item</button>
+      </div>
+      <div class="list" id="list3">
+        <div class="list-header">Complete</div>
+        <button class="new-item" onclick="createNewItem('list3')">Add New Item</button>
+      </div>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
