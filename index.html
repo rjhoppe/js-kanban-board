@@ -10,7 +10,7 @@
 <body>
   <div class="app">
     <header>
-      <h1>Drag N' Drop</h1>
+      <h1>Kanban Board</h1>
     </header>
     <div class="lists">
       <div class="list" id="list1">
@@ -20,16 +20,27 @@
             edit
           </span>
         </div>
-        <button class="new-item" onclick="createNewItem('list1')">Add New Item</button>
+        <button class="new-item" id="list1-create-new" onclick="createNewItem('list1')">Add New Item</button>
       </div>
       <div class="list" id="list2">
         <div class="list-header">In Progress</div>
-        <button class="new-item" onclick="createNewItem('list2')">Add New Item</button>
+        <button class="new-item" id="list2-create-new" onclick="createNewItem('list2')">Add New Item</button>
       </div>
       <div class="list" id="list3">
         <div class="list-header">Complete</div>
-        <button class="new-item" onclick="createNewItem('list3')">Add New Item</button>
+        <button class="new-item" id="list3-create-new" onclick="createNewItem('list3')">Add New Item</button>
       </div>
+    </div>
+    <div class="pop-up-container" id="pop-up-container-id">
+      <form class="pop-up-form">
+        <label class="pop-up-label" id="pop-up-label-title" for="title">Title:</label>
+        <input class="pop-up-input" id="pop-up-input-title" type="text">
+        <label class="pop-up-label" id="pop-up-label-assignee" for="assignee">Assignee:</label>
+        <input class="pop-up-input" id="pop-up-input-assignee" type="assignee">
+        <label class="pop-up-label" id="pop-up-label-desc" for="desc">Description:</label>
+        <textarea class="pop-up-textarea" id="pop-up-input-desc" name="desc-box"></textarea><br>
+        <button class="pop-up-button" id="pop-up-submit" type="submit">Save</button>
+      </form>
     </div>
   </div>
 <script src="script.js"></script>

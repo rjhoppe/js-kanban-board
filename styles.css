@@ -81,3 +81,46 @@ header {
   font-size: 16px;
 }
 
+/* Button Hover Effect */
+
+span:hover {
+  color: blue;
+} 
+
+.new-item:hover {
+  border-color: blue;
+}
+
+/* Pop Up Section */
+
+.pop-up-container {
+  height: 300px;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  
+  background-color: #FFCE00;
+  border-style: ridge;
+  border-color: black;
+  /* visibility: hidden; */
+}
+
+.pop-up-form {
+  top: 10%;
+  position: relative;
+}
+
+.pop-up-label {
+  display: flex;
+  margin-left: 60px;
+  padding: 5px;
+  text-align: start;
+}
+
+#pop-up-submit {
+  margin-top: 30px;
+  padding: 5px 15px 5px 15px;
+}

@@ -41,9 +41,22 @@ function dragInit() {
       list.addEventListener('drop', function(e) {      
         this.append(draggedItem);
         this.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+        parentEle = draggedItem.closest('.list');
+
+        if (parentEle.id === 'list1') {
+          let lastNode = document.getElementById('list1-create-new');
+          parentEle.insertBefore(draggedItem, lastNode);
+        } else if (parentEle.id === 'list2') {
+          let lastNode = document.getElementById('list2-create-new');
+          parentEle.insertBefore(draggedItem, lastNode);
+        } else if (parentEle.id === 'list3') {
+          let lastNode = document.getElementById('list3-create-new');
+          parentEle.insertBefore(draggedItem, lastNode);
+        }
 
         // Need to add functionality where you can drop an element between another element
         // New function
+        // Just gets added to the bottom of the existing list (i.e. above the create new button)
 
       });
     }
@@ -57,18 +70,15 @@ function editItem() {
   console.log('Clicked!')
 }
 
-// Function for inserting an element into a list
-function dragInsert() {
-}
-
 function createNewItem(list) {
-  const parentElement = document.getElementById(list)
+  const parentElement = document.getElementById(list);
   const newListItem = document.createElement('div');
   const lastNode = document.getElementById(list).lastElementChild;
 
-  const childElement = document.createElement("span")
-  childElement.classList.add('material-symbols-outlined')
-  childElement.innerHTML = 'edit'
+  const childElement = document.createElement("span");
+  childElement.classList.add('material-symbols-outlined');
+  childElement.innerHTML = 'edit';
+  childElement.setAttribute('onclick', "editItem()");
 
   newListItem.classList.add('list-item');
   newListItem.setAttribute('draggable', true);
