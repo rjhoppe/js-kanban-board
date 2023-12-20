@@ -54,21 +54,12 @@ function dragInit() {
           parentEle.insertBefore(draggedItem, lastNode);
         }
 
-        // Need to add functionality where you can drop an element between another element
-        // New function
-        // Just gets added to the bottom of the existing list (i.e. above the create new button)
-
       });
     }
   }
 }
 
 dragInit();
-
-// Function for clicking Edit icon
-function editItem() {
-  console.log('Clicked!')
-}
 
 function createNewItem(list) {
   const parentElement = document.getElementById(list);
